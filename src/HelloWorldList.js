@@ -9,6 +9,7 @@ class HelloWorldList extends Component {
     super(props);
     this.state = { people: ['Jim', 'Sally', 'Moheet']};
     this.addGreeting = this.addGreeting.bind(this);
+    this.removeGreeting = this.removeGreeting.bind(this);
   }
 
   addGreeting(newName) {
@@ -20,8 +21,18 @@ class HelloWorldList extends Component {
 
   renderGreetings() {
     return this.state.people.map(name => (
-      <HelloWorld key={name} name={name} />
+      <HelloWorld
+        key={name}
+        name={name}
+        removeGreeting={this.removeGreeting} />
     ));
+  }
+
+  removeGreeting(removeName) {
+    const filteredGreetings = this.state.people.filter(name => {
+      return name !== removeName;
+    });
+    this.setState({ people: filteredGreetings });
   }
 
   render() {
