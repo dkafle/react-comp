@@ -1,0 +1,28 @@
+exports[`function HelloWorld(props) {/* istanbul ignore next */_classCallCheck(this, HelloWorld);var _this = _possibleConstructorReturn(this, (HelloWorld.__proto__ || Object.getPrototypeOf(HelloWorld)).call(this,
+    props));
+    /* istanbul ignore next */_this.state = { greeting: 'Hello' };
+    /* istanbul ignore next */_this.frenchify = /* istanbul ignore next */_this.frenchify.bind( /* istanbul ignore next */_this);
+    /* istanbul ignore next */_this.removeGreeting = /* istanbul ignore next */_this.removeGreeting.bind( /* istanbul ignore next */_this); /* istanbul ignore next */return _this;
+  } renders and matches our snapshot 1`] = `
+<div
+  className="HelloWorld">
+  <div>
+    Hello
+     
+    Person
+    !
+  </div>
+  <br />
+  <button
+    className="frenchify"
+    onClick={[Function]}>
+    Frenchify
+  </button>
+  <br />
+  <button
+    className="remove"
+    onClick={[Function]}>
+    Remove
+  </button>
+</div>
+`;
