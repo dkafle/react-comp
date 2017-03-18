@@ -32,10 +32,19 @@ class AddGreeter extends Component {
       this.addGreeting();
     }
   }
+  
+  _getPeopleCount(){
+    if (this.props.people.length > 0) {
+      return <p>There are {this.props.people.length} people in the list.</p>;
+    } else {
+      return <p>Let's add some people in the list...</p>;
+    }
+  }
 
   render() {
     return(
       <div className="AddGreeter">
+        {this._getPeopleCount()}
         <input type="text" ref="greet" onChange={this.handleUpdate} onKeyUp={this.handleEnter}/>
         &nbsp;&nbsp;
         <button onClick={this.addGreeting}>Add</button>
